@@ -19,6 +19,7 @@ FEATURES / INPUTS
 6.       Sex-specificity
 7.       Sex-changing
 8.       Define Time step (annual, season, monthly, etc.)
+9.       Multi-species?
  
 OUTPUTS
 1.       Summary of specifications (nsims, seed, time, date, all entries passed to functions)
