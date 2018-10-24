@@ -10,8 +10,26 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Ideas
 
-This is a document where we can post our ideas as they occur.
+This is a document where we can post our ideas as they occur. Add newest bits to the top.
+
+## Testing
+
+R package testthat has been recommended by some
+* GitHub site - https://github.com/r-lib/testthat
+* Write-up by Hadley Wickham - http://r-pkgs.had.co.nz/tests.html
+* Inattentional Coffee blog - https://katherinemwood.github.io/post/testthat/
+
+Travis CI for continuous integration is popular
+* Home page - https://travis-ci.org/
+* Julia Silge blog - https://juliasilge.com/blog/beginners-guide-to-travis/
 
 
+## Possible names (still thinking of more...)
+
+* WHOM - Woods Hole Operating Model ("whom" pronounced to rhyme with "qualm" as in the Woody Allen movie)
+* WHSPR - Woods Hole Simulation Project in R (subtle link to WHAM, who has a song "Careless Whisper")
+* SimSAM - Simulator for Stock Assessment Methods (perhaps too close to SISAM)
+* WHEEP - Woods Hole Experimenting on Exploited Populations (as in read 'em and)
+* WHONDER - Woods Hole Open Numeric Determination of Exploited Resources (as in one hit, but a real stretch on the acronym)
 
 
