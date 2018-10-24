@@ -1,0 +1,17 @@
+---
+title: "Ideas"
+date: 10/24/18
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Ideas
+
+This is a document where we can post our ideas as they occur.
+
+
+
+
