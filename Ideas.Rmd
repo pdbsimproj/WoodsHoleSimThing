@@ -23,6 +23,9 @@ Travis CI for continuous integration is popular
 * Home page - https://travis-ci.org/
 * Julia Silge blog - https://juliasilge.com/blog/beginners-guide-to-travis/
 
+Preliminary look at these seems to indicate testthat is the better choice for our purposes. It seems to be set up to evaluate a structured comparison between the return value of a function and what you expect the function to produce. This should work pretty well for our modular design. 
+
+Travis CI seems to be more for testing the version compatibility of dependent libraries.
 
 ## Possible names (still thinking of more...)
 
