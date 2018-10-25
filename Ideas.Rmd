@@ -12,6 +12,23 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This is a document where we can post our ideas as they occur. Add newest bits to the top.
 
+## Proposed directory structure
+
+R - directory for the package R code
+man - directory for the roxygen-generated documentation (use devtools::document() to create the files)
+vignettes - directory for multiple short examples of how to use the package functions efficiently
+test - directory for the testthat code to run tests on each piece that we put in the R dir
+datadictionary - directory to hold our decisions on structures, naming conventions, styles, etc.
+explorations - a test directory for us to show each other code/problems before it goes into the R dir
+
+In the main directory would be: 
+DESCRIPTION file (good for keeping track of version)
+NAMESPACE (for listing the required packages)
+README.md (for others to get an idea of what we're doing) and 
+Ideas.Rmd (for us to share our ideas internally). 
+
+Thoughts?
+
 ## Testing
 
 R package testthat has been recommended by some
