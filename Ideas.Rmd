@@ -12,6 +12,45 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This is a document where we can post our ideas as they occur. Add newest bits to the top.
 
+## Suggestions for organizing functions
+
+read_input_functions.r
+- read_ASAP (possibly split this into read_ASAP_dat and read_ASAP_rdat)
+- read_VPA
+- read_WHThing (or whatever we end up calling the package, this function would read files created by the package)
+
+setup_operating_model_functions.r
+- define_dimensions
+- define_starting_pop
+- define_recruitment
+- define_F
+- define_selectivity
+etc. etc. etc.
+
+setup_estimating_model_functions.r
+- create_ASAP
+- create_VPA
+- create_SAM
+- create_WHAM
+
+setup_scenarios_functions.r
+- set_scenarios (not sure if this is really needed, placeholder for now)
+
+run_functions.r
+- run_one_model
+- run_all_models
+- run_scenarios
+
+summarizing_functions.r
+- make_table_X
+- make_plot_Y
+(will need lots of these, will need to think how best to organize them once we start producing results)
+
+utility_functions.r (could also call this UsefulFunctions.r)
+(ltos of the functions Dan has already provided)
+
+What is missing?
+
 ## Proposed directory structure
 
 R - directory for the package R code
