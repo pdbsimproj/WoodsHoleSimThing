@@ -12,6 +12,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This is a document where we can post our ideas as they occur. Add newest bits to the top.
 
+## Possible approach to getting project done
+https://blog.trello.com/beginners-guide-scrum-and-agile-project-management
+Mike Palmer has been using this for PTNS and is planning on using it for ADIOS. We could check in with him to see if he thinks it would work for this project.
+
 ## Suggestions for organizing functions
 
 read_input_functions.r
