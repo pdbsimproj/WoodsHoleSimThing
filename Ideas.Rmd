@@ -16,6 +16,8 @@ This is a document where we can post our ideas as they occur. Add newest bits to
 https://blog.trello.com/beginners-guide-scrum-and-agile-project-management
 Mike Palmer has been using this for PTNS and is planning on using it for ADIOS. We could check in with him to see if he thinks it would work for this project.
 
+Some other free software for project management can be found at https://project-management-software.financesonline.com/?s=&pt=applications&field_5404531d2448f=Freelancers&field_540452ed2448e=Free&field_5404529a2448d=English&field_540451352448c=All&field_544e2147b847e=On+Premise where I've already done some filtering.
+
 ## Suggestions for organizing functions
 
 read_input_functions.r
