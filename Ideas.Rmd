@@ -12,6 +12,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This is a document where we can post our ideas as they occur. Add newest bits to the top.
 
+## Another possible approach to getting project done
+Fishackathon! Set aside a day sometime this winter and have folks contribute code. Not sure how to make it into a contest, but I'm sure there is a way. Would require us to have the data dictionary, naming conventions, style, and framework set up in advance. Would require some clean up after the fact to get all the testthat stuff and overall testing done, but would bring together lots of folks interested in using the R package when it is done. Lots of ways to skin this cat...
+
 ## Possible approach to getting project done
 https://blog.trello.com/beginners-guide-scrum-and-agile-project-management
 Mike Palmer has been using this for PTNS and is planning on using it for ADIOS. We could check in with him to see if he thinks it would work for this project.
