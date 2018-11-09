@@ -12,6 +12,19 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This is a document where we can post our ideas as they occur. Add newest bits to the top.
 
+## Some possibly useful websites showing what others are doing along these lines
+https://github.com/datalimited/stocksims - see simulated dir for some examples of setups (FLR)
+https://github.com/SNAPwg/SNAP - a data limited approach using csv files
+https://github.com/szuwalski/GeMS - a two box spatial model for MSE (see the Wiki)
+https://www.datalimitedtoolkit.org/ - flashy homepage, lots of interesting computing details under the hood
+https://rdrr.io/cran/MSEtool/ - from the makers of DLMtool comes MSEtool - works with analytical assessments instead of data-limited assessments
+https://github.com/John-Brandon/PBR-Tier-System - Fortran code for a blast from the past
+https://github.com/laurieKell/mpb - Laurie Kell version of MSE for FLR
+https://github.com/flr/mse - official FLR version of MSE
+https://github.com/ConFooBio/gmse - a complete package including tests and vignettes
+https://github.com/cgrandin/msess - because everything is better with SS
+https://puntapps.shinyapps.io/tunamse/ - a Shiny MSE
+
 ## Another possible approach to getting project done
 Fishackathon! Set aside a day sometime this winter and have folks contribute code. Not sure how to make it into a contest, but I'm sure there is a way. Would require us to have the data dictionary, naming conventions, style, and framework set up in advance. Would require some clean up after the fact to get all the testthat stuff and overall testing done, but would bring together lots of folks interested in using the R package when it is done. Lots of ways to skin this cat...
 
