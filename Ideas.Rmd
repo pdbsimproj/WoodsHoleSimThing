@@ -12,6 +12,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This is a document where we can post our ideas as they occur. Add newest bits to the top.
 
+## Presentation at R conference about using R packages by a team
+[EARL2018Seattle](https://earlconf.com/_downloads/us_speakers/Seattle/Stephanie-Kirmer%20v2.pdf) - The Case for 
+R Packages as Team Collaboration Tools
+
 ## Some possibly useful websites showing what others are doing along these lines
 [stocksims](https://github.com/datalimited/stocksims) - see simulated dir for some examples of setups (FLR)
 [SNAP](https://github.com/SNAPwg/SNAP) - a data limited approach using csv files
