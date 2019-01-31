@@ -12,6 +12,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This is a document where we can post our ideas as they occur. Add newest bits to the top.
 
+## added a folder of cheatsheets for a number of R packages and approaches
+
 ## Some ideas about group code review
 [rOpenSci](https://ropensci.org/blog/2018/11/29/codereview/) Code Review in the Lab
 
