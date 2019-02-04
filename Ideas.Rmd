@@ -12,6 +12,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This is a document where we can post our ideas as they occur. Add newest bits to the top.
 
+## Some useful ideas for writing packages (don't need to follow them all)
+[rOpenSci](https://ropensci.github.io/dev_guide/) sections 1 and 3 seem most useful to us
+
 ## added a folder of cheatsheets for a number of R packages and approaches
 
 ## Some ideas about group code review
