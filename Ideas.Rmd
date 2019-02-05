@@ -77,7 +77,11 @@ population_dynamics_functions.r
 - generate_indices
 - apply_observation_error
 - calculate_reference_points
-- apply_harvest_control_rule (not sure this goes here)
+
+management_projection_functions.r (component of MSE development)
+- calculate stock status
+- apply_harvest_control_rule 
+- project forward (calculate population and harvest quantities)
 
 run_functions.r
 - run_one_model
