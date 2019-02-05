@@ -18,7 +18,7 @@ Fn.name | Keyword | What it does | work needed
 -------- | -------- | -------- | --------
 get.f.pattern.fn.r  | Fishing Mortality | various options to specify F | change options from numeric to literal
 setup.asap.wcoat.fn.r  | Input File | Create vanilla ASAP input file | NA
-etc. | | | |
+etc. | | | 
 or, maybe this is something to handle with the project management? | | | 
 
 
