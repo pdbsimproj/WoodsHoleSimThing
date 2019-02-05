@@ -133,5 +133,8 @@ Travis CI seems to be more for testing the version compatibility of dependent li
 * SimSAM - Simulator for Stock Assessment Methods (perhaps too close to SISAM)
 * WHEEP - Woods Hole Experimenting on Exploited Populations (as in read 'em and)
 * WHONDER - Woods Hole Open Numeric Determination of Exploited Resources (as in one hit, but a real stretch on the acronym)
+* WHAT - Woods Hole Assessment Toy
+* WhaTF - Woods Hole Assessment Toy for Fisheries
+* WHALL - Woods Hole Age Length Lagniappe
 
 
