@@ -14,12 +14,24 @@ This is a document where we can post our ideas as they occur. Add newest bits to
 
 ## Might be good to start a list of functions we already have that we can aggregate/build on
 For example:
-Fn.name | Keyword | What it does | work needed
--------- | -------- | -------- | --------
-get.f.pattern.fn.r  | Fishing Mortality | various options to specify F | change options from numeric to literal
-setup.asap.wcoat.fn.r  | Input File | Create vanilla ASAP input file | NA
-etc. | | | 
-or, maybe this is something to handle with the project management? | | | 
+
+```{r echo=FALSE, results='asis', warning=FALSE}
+library(knitr)
+library(kableExtra)
+
+x <- matrix(NA, nrow=4, ncol=4)
+colnames(x) <- c('Fn.name', 'Keyword', 'What it does', 'Work needed')
+x[1,] <- c('get.f.pattern.fn', 'Fishing Mortality', 'various options to specify F', 'change options from numeric to literal')
+x[2,] <- c('setup.asap.wcoast.fn', 'Input File', 'creates vanilla ASAP input file', 'NA')
+x[3,] <- c('etc.', '..', '..', '..')
+x[4,] <- c('..', '..', '..', '..')
+
+kable(x) %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+
+```
+
+or, maybe this is something to handle with the project management?
 
 
 ## Some useful ideas for writing packages (don't need to follow them all)
