@@ -12,6 +12,16 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This is a document where we can post our ideas as they occur. Add newest bits to the top.
 
+## Might be good to start a list of functions we already have that we can aggregate/build on
+For example:
+Fn.name | Keyword | What it does | work needed
+-------- | -------- | -------- | --------
+get.f.pattern.fn.r  | Fishing Mortality | various options to specify F | change options from numeric to literal
+setup.asap.wcoat.fn.r  | Input File | Create vanilla ASAP input file | NA
+etc. | | | |
+or, maybe this is something to handle with the project management? | | | 
+
+
 ## Some useful ideas for writing packages (don't need to follow them all)
 [rOpenSci](https://ropensci.github.io/dev_guide/) section I seems most useful to us
 
