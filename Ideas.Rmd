@@ -31,6 +31,14 @@ kable(x) %>%
 
 ```
 
+(same table, for some reason it didn't work first time)
+
+Fn.name       |   Keyword   |   What it does    |   Work Needed 
+------------- | -------------  | ------------- | -------------
+get.f.pattern.fn    |   Fishing Mortality   |   various options to specify F    | change options from numeric to literal        
+get.asap.wcoast.fn    |   Input File    |   creates vanilla ASAP input file   |   NA
+etc.  |  |  | 
+
 or, maybe this is something to handle with the project management?
 
 
