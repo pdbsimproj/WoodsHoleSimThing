@@ -14,6 +14,7 @@ This is a document where we can post our ideas as they occur. Add newest bits to
 
 ## Some ideas from across the pond
 [doc](https://github.com/ices-tools-prod/doc) ICES guidance on R package development and maintenance
+[TAF](https://github.com/ices-tools-prod/icesTAF) and an example of how they do it
 
 ## Might be good to start a list of functions we already have that we can aggregate/build on
 For example:
