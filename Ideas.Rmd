@@ -12,6 +12,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This is a document where we can post our ideas as they occur. Add newest bits to the top.
 
+## Some ideas from across the pond
+[doc](https://github.com/ices-tools-prod/doc) ICES guidance on R package development and maintenance
+
 ## Might be good to start a list of functions we already have that we can aggregate/build on
 For example:
 
