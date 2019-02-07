@@ -13,9 +13,17 @@ knitr::opts_chunk$set(echo = TRUE)
 This is a document where we can post our ideas as they occur. Add newest bits to the top.
 
 ## Thoughts about getting started
- * we need a way to gather the initial specifications and user options
- * there are multiple ways to sweep this up (top section of R program, an external text file with comments that a user modifies, or a Shiny App that shows users what they selected (for example plots of biology, summary of dimensions, etc.) and that writes a list file that is subsequently written to user directory and then read into the R Sim package. there should also be an option for Shiny to read in a list file that populates all fields so a user can modify it.
- * given these initial specifications, the rest of the R code should consist of functions where the arguments are pulled from this list and the actions are determined by whatever flags the user selected
+
+
+   * we need a way to gather the initial specifications and user options
+   * there are multiple ways to sweep this up 
+     + top section of R program
+     + an external text file with comments that a user modifies
+     + or a Shiny App that shows users what they selected 
+        - for example plots of biology, summary of dimensions, etc.
+        - writes a list file that is subsequently written to user directory and then read into the R Sim package
+        - there should also be an option for Shiny to read in a list file that populates all fields so a user can modify it
+   * given these initial specifications, the rest of the R code should consist of functions where the arguments are pulled from this list and the actions are determined by whatever flags the user selected
 
 ## Some ideas from across the pond
 [doc](https://github.com/ices-tools-prod/doc) ICES guidance on R package development and maintenance
