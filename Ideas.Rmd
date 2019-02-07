@@ -14,7 +14,6 @@ This is a document where we can post our ideas as they occur. Add newest bits to
 
 ## Thoughts about getting started
 
-
    * we need a way to gather the initial specifications and user options
    * there are multiple ways to sweep this up 
      + top section of R program
