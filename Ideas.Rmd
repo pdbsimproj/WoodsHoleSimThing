@@ -12,6 +12,16 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This is a document where we can post our ideas as they occur. Add newest bits to the top.
 
+## Mindmap
+
+* Using Freeplane software
++ [wiki](https://www.freeplane.org/wiki/index.php/Home) wiki
++ [download](https://sourceforge.net/projects/freeplane/) download (requires admin rights on Windows, "allow access" when prompted)
++ [forum]( https://sourceforge.net/p/freeplane/discussion/758437) forum
++ Tips and Tricks
+- Use 'Enter' instead of 'insert' or Edit > New node > New sibling node when creating new subnode
+- View > View Settings > Outline view organizes into a neat outline
+
 ## Thoughts about getting started
 
    * we need a way to gather the initial specifications and user options
