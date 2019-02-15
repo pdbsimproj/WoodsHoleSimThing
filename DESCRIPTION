@@ -1,0 +1,14 @@
+Package: WHSIM
+Type: Package
+Title: Woods Hole Simulation thing (name not final) - A stock assessment model performance tester.
+Version: 0.1.0
+Author: c(person("Chris", "Legault", role = "aut"),person("Liz", "Brooks", role = "aut"),person("Dan", "Hennen",email="daniel.hennen@noaa.gov", role = "aut"))
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+Imports: 
+    MASS
