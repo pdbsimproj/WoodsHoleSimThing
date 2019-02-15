@@ -12,6 +12,14 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This is a document where we can post our ideas as they occur. Add newest bits to the top.
 
+## R style guides
+
+[google](https://google.github.io/styleguide/Rguide.xml) seems to be the most popular
+[tidyverse](https://style.tidyverse.org/) based on Google but tweaked by Hadley et al.
+[advanced R](http://adv-r.had.co.nz/Style.html) more from Hadley
+[Rcheology](https://cran.r-project.org/web/packages/rockchalk/vignettes/Rstyle.pdf) from R itself (see 4.2 for why not to use periods in function names)
+[blog](https://www.r-bloggers.com/%F0%9F%96%8A-r-coding-style-guide/) includes some interesting defaults to set in RStudio
+
 ## Mindmap
 
 * Using Freeplane software
