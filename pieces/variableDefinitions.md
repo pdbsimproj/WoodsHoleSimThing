@@ -16,5 +16,10 @@
 + nAgesOM - number of ages simulated by OM [integer]
 
 
-### Biology
+### Biology (depending on where process error is added, these could have another dimension of nSims)
 + natM - natural mortality [array: nYearsOM x nAgesOM]
++ vonB - von Bertalanffy parameters [array: nYearsOM x 3] (default is all years equal)
++ matAge - maturity at age [array: nYearsOM x nAgesOM]
++ typeSR - stock recruit function to be used [char: BevHolt, Ricker, Hockey, Geomean, etc]
++ parSR - parameters for stock recruit function [array: depends on typeSR]
+
