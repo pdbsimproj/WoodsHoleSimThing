@@ -11,10 +11,10 @@
 + testEnvDriver - test inclusion of environmental drivers (T) or not (F)  [boolean]
 
 ### Dimension-related variables
-nSims - number of simulated data sets  [integer]
-nYearsOM - number of years simulated by OM [integer] (depending on flags checked above, we could have nYearsEM, etc..)
-nAgesOM - number of ages simulated by OM [integer]
++ nSims - number of simulated data sets  [integer]
++ nYearsOM - number of years simulated by OM [integer] (depending on flags checked above, we could have nYearsEM, etc..)
++ nAgesOM - number of ages simulated by OM [integer]
 
 
 ### Biology
-natM - natural mortality [array: nYearsOM x nAgesOM]
++ natM - natural mortality [array: nYearsOM x nAgesOM]
