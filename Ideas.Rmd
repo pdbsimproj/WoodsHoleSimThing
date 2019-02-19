@@ -12,6 +12,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This is a document where we can post our ideas as they occur. Add newest bits to the top.
 
+## usethis instead of devtools
+[part1](https://blog.methodsconsultants.com/posts/developing-r-packages-using-gitlab-ci-part-i/) nice overview of creating R package with usethis
+[part2](https://blog.methodsconsultants.com/posts/developing-r-packages-using-gitlab-ci-part-i/) not much of interest for us, for completeness only
+[part3](https://blog.methodsconsultants.com/posts/developing-r-packages-with-usethis-and-gitlab-ci-part-iii/) some cool tricks for keeping code consistent across multiple authors
+
 ## R style guides
 
 [google](https://google.github.io/styleguide/Rguide.xml) seems to be the most popular
