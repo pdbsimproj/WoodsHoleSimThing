@@ -42,18 +42,34 @@
 + expB - exploitable biomass calculated on January 1 [array: nYearsOM x nSims]
 
 ### Fishery
++ Each of these will need to be indexed by fleet if multiple fleets!
 + catchAge - numbers of individuals caught at age each year [array: nYearsOM x nAgesOm x nSims]
-+ totCatchN - total number of individuals caught each year [array: nYearsOM x nSims]
-+ totCatchB - total biomass of individuals caught each year [array: nYearsOM x nSims]
-+ catchWgt - average weight at age in the catch [array: nYearsOM x nAgesOM x nSims]
++ totCatchN - total number of individuals caught each year [array: nYearsOM x nSims] #can be output only ?
++ totCatchB - total biomass of individuals caught each year [array: nYearsOM x nSims] #can be output only ?
++ catchWgt - average weight at age in the catch [array: nYearsOM x nAgesOM x nSims] #can be output only ?
++ selxFage - fishery selectivity by age for each year [array: nYearsOM x nAgesOM]
++ selxFlength - fishery selectivity by length for each year [array: nYearsOM x nLengthsOM]
 
 ### Indices
++ Each of these will need to be indexed by survey if multiple surveys
++ indAge - numbers of individuals at age in survey each year [array: nYearsOM x nAgesOm x nSims]
++ indLength - numbers of individuals at length in survey each year [array: nYearsOM x nLengthsOm x nSims]
++ selxIage - survey selectivity by age for each year [array: nYearsOM x nAgesOM]
++ selxIlength - survey selectivity by length for each year [array: nYearsOM x nLengthsOM]
 
 ### Observation Error
-
++ Each of these could potentially be indexed by fleet/Survey if multiple
++ obsErrorFtype - observation error structure for each Fleet [vector: nFleet] (default is non-autocorrelated lognormal)
++ obsErrorItype - observation error structure for each Survey [vector: nSurvey] (default is non-autocorrelated lognormal)
++ obsErrorF - observation error in F each year [array: nYearsOM x nSims] (default is constant in time)
++ obsErrorI - observation error in Index each year [array: nYearsOM x nSims] (default is constant in time)
 
 ### Process Error
-
++ Each of these could potentially be indexed by fleet/Survey if multiple
++ procErrorFtype - process error structure for each Fleet [vector: nFleet] (default is non-autocorrelated lognormal)
++ procErrorItype - process error structure for each Survey [vector: nSurvey] (default is non-autocorrelated lognormal)
++ procErrorF - process error in F each year [array: nYearsOM x nSims] (default is constant in time)
++ procErrorI - process error in Index each year [array: nYearsOM x nSims] (default is constant in time)
 
 ### Reference Points
 
