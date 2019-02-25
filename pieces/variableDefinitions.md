@@ -3,7 +3,6 @@
 ## Naming Rules
 + omit 's' to make variables plural (e.g., nSim instead of nSims; nYear instead of nYears)
 
-
 ### Flags for intended use (default position is F)
 + testAssmtModel - test performance of assessment model (T) or not (F) [logical]
 + testSampling - create data to test sampling (T) or not (F)  [logical]
