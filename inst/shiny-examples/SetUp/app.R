@@ -448,10 +448,16 @@ server <- function(input, output, session) {
      lines(ssb, r)
      title(main = "Demonstration of recruitment variability")
   })
+ 
+  #chris's original code 
+  # output$downloadinput <- downloadHandler(
+  #   filename = function() {paste0("ShinyInput", Sys.time(), ".DMP")},
+  #   content = function(file) {save(input, file=file)}
+  # )
   
   output$downloadinput <- downloadHandler(
-    filename = function() {paste0("ShinyInput", Sys.time(), ".DMP")},
-    content = function(file) {save(input, file=file)}
+    filename = function() {paste0("ShinyInput", Sys.time(), ".Rlist")},
+    content = function(file) {dput(input, file=file)}
   )
   
   output$downloadoutput <- downloadHandler(
