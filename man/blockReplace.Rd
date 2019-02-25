@@ -8,8 +8,7 @@
              NOTE: Find1, Replace1 and ext all must be quoted strings!
 ***** WARNING: Watch out for automatic indentation - disble or use shift+tab to outdent!!!!!}
 \usage{
-blockReplace(dnm, Find1, Replace1, ext = NULL, recursive = F,
-  backup = T)
+blockReplace(dnm, Find1, Replace1, ext = NULL, recursive = F, backup = T)
 }
 \description{
 nd a block of text (Find1) and replace with another block (Replace1) in all files (with extension - ext or containing - ext)

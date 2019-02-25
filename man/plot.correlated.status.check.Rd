@@ -6,11 +6,11 @@
 a plot and return the probability of exceeding the threshold ie overfishing
 or overfished status}
 \usage{
-\method{plot}{correlated.status.check}(mu = NULL, cv1 = NULL,
-  cor1 = NULL, aname = NULL, bname = NULL, colors = c("blue",
-  "red", "purple"), b1 = 1000, xlim = NULL, ylim = NULL,
-  xlab = NULL, ylab = NULL, main = NULL, sub1 = NULL,
-  put.legend = "topright", status.test = "overfishing")
+\method{plot}{correlated.status.check}(mu = NULL, cv1 = NULL, cor1 = NULL,
+  aname = NULL, bname = NULL, colors = c("blue", "red", "purple"),
+  b1 = 1000, xlim = NULL, ylim = NULL, xlab = NULL, ylab = NULL,
+  main = NULL, sub1 = NULL, put.legend = "topright",
+  status.test = "overfishing")
 }
 \arguments{
 \item{mu}{default=NULL vector of means of the two distributions one for the estimate, one

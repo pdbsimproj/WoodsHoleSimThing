@@ -11,8 +11,7 @@
  @param col1 color of error bars
  @param ... other plot parameters}
 \usage{
-error.bar(x, y, upper, lower = upper, length = 0.1, col1 = "black",
-  ...)
+error.bar(x, y, upper, lower = upper, length = 0.1, col1 = "black", ...)
 }
 \description{
 make error bars on a plot

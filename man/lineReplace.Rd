@@ -7,8 +7,7 @@ in directory (dnm) - this can be done recursively or not. You will by default al
 of any files that you alter, but you can turn that off with backup=F
               NOTE: Find1, Replace1 and ext all must be quoted strings!}
 \usage{
-lineReplace(dnm, Find1, Replace1, ext = NULL, recursive = F,
-  backup = T)
+lineReplace(dnm, Find1, Replace1, ext = NULL, recursive = F, backup = T)
 }
 \arguments{
 \item{dnm}{directory to look in}
