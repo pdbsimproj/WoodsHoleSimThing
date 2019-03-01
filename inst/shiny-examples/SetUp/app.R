@@ -82,7 +82,7 @@ ui <- navbarPage(strong("WKFORBIAS Set Up"),
                                           max = 10,
                                           step = 1,
                                           value = c(4,5),
-                                          sep=""),
+                                          sep="" ), #removes the comma from the year display on the slider
                               
                               sliderInput("Fages",
                                           "Ages for Setting F (in addition to first and last age)",
@@ -230,11 +230,26 @@ ui <- navbarPage(strong("WKFORBIAS Set Up"),
                           )
                  ),
                  
-                 tabPanel("Download",
+                 tabPanel("Load/Save",
                           sidebarLayout(
-                            sidebarPanel(
-                              downloadButton("downloadinput", "Download Shiny input"),
-                              downloadButton("downloadoutput", "Download Shiny output")
+                            mainPanel(
+                              #downloadButton("downloadinput", "Download Shiny input"),
+                              tags$h3("Load an existing configuration for modification")
+                              #value = "~/Desktop/user_inputs.csv"
+                              ,textInput(inputId = 'inputsLocation', label = 'Inputs Location'
+                                         , value = "/home/dhennen/WHSIM/TestData/user_inputs.Rdata")
+                              ,actionButton('load_inputs', 'Load inputs')
+                              ,br()
+                              ,br()
+                              ,tags$h3("Save your configuration for simulation" )
+                              ,br()
+                              ,br()
+                              #downloadButton("downloadoutput", "Download Shiny output")
+                              #/home/dhennen/WHSIM/TestData
+                              # value = "~/Desktop/user_changes.Rdata"
+                              ,textInput(inputId = 'outputsLocation', label = 'Location'
+                                         , value = "/home/dhennen/WHSIM/TestData/user_changes.Rdata")
+                              ,actionButton('save_inputs', 'Save modifications')
                             ),
                             mainPanel(
                             )
@@ -450,15 +465,45 @@ server <- function(input, output, session) {
     title(main = "Demonstration of recruitment variability")
   })
   
-  output$downloadinput <- downloadHandler(
-    filename = function() {paste0("ShinyInput", Sys.time(), ".DMP")},
-    content = function(file) {save(input, file=file)}
-  )
+  load_Rdata <- function(){
+    if(is.null(input$file)) return(NULL)
+    #need to read the input file without changing it so use isolate()
+    inFile <- isolate({ input$file })
+    
+    #load Rdata setting the envir is important here
+    load(inFile$datapath, envir=environment())
+    
+    # Check if specified variable exists in environment
+    if( !is.null(n.env$var) ){
+      output$out <- renderPrint({ str(n.env$var) })
+    }
+    else{
+      output$out <- renderPrint({ "No variable var in .Rdata file" })
+    }
+  }
   
-  output$downloadoutput <- downloadHandler(
-    filename = function() {paste0("ShinyOutput", Sys.time(), ".DMP")},
-    content = function(file) {save(output, file=file)}
-  )
+  observeEvent(input$load_inputs, {
+    load_Rdata()
+    #print(str(inputs)) #values are seen here
+    updateSelectInput(session, inputId = "year1", selected = inputs$year1)
+    updateSliderInput(session, inputId = "nyears", value = inputs$nyears)
+    updateSliderInput(session, inputId = "nages", value = inputs$nages)
+    updateSliderInput(session, inputId = "nindices", value = inputs$nindices)
+    updateCheckboxInput(session, inputId = "plusgroupflag", value = inputs$plusgroupflag)
+  })
+  
+  observeEvent(input$save_inputs, {
+    #save_Rdata()
+    # choose inputs to save
+    inputs <- list(
+      "year1"=input$year1
+      ,"nyears"=input$nyears
+      ,"nages"=input$nages
+      ,"plusgroupflag"=input$plusgroupflag
+      ,"nindices"=input$nindices
+      )
+    save(inputs,file = paste0(input$inputsLocation))
+  }) 
 }
 
 # Run the application 
