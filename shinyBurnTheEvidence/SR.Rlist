@@ -1,0 +1,3 @@
+structure(list(SRcurve = "BevHolt", BHR0 = 14L, BHsteepness = 0.7, 
+    BHSSB0 = 305.16512802152, BHalpha = 15.68, BHbeta = 36.6198153625824), .Names = c("SRcurve", 
+"BHR0", "BHsteepness", "BHSSB0", "BHalpha", "BHbeta"))
