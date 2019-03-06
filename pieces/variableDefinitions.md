@@ -3,15 +3,16 @@
 ## Naming Rules
 + omit 's' to make variables plural (e.g., nSim instead of nSims; nYear instead of nYears)
 
-### Flags for intended use (default position is F)
+### Flags for intended use (Using these as Radio Buttons on Shiny User Interface)
 + testAssmtModel - test performance of assessment model (T) or not (F) [logical]
-+ testSampling - create data to test sampling (T) or not (F)  [logical]
-+ spatialOM - single spatial unit (T) or multiple spatial units (F)  [logical]
-+ testMSE - perform MSE testing (T) or not (F)  [logical]
++ testEnvDriver - test inclusion of environmental drivers (T) or not (F)  [logical]
 + testHCR - perform HCR testing T) or not (F)  [logical]
 + testRisk - perform testing for risk policy (T) or not (F)  [logical]
 + testEnsemble - perform model ensemble testing (T) or not (F)  [logical]
-+ testEnvDriver - test inclusion of environmental drivers (T) or not (F)  [logical]
++ testMSE - perform MSE testing (T) or not (F)  [logical]
++ testSampling - create data to test sampling (T) or not (F)  [logical]
++ spatialOM - single spatial unit (T) or multiple spatial units (F)  [logical]
+
 
 ### Set-up
 + rSeed - random number seed [integer]

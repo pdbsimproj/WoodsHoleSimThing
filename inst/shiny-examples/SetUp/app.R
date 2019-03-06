@@ -4,241 +4,257 @@
 
 # Shiny user interface
 ui <- navbarPage(strong("WKFORBIAS Set Up"),
-     
-  tabPanel("Dimensions",
-    sidebarLayout(
-     sidebarPanel(
-       selectInput("year1",
-                   "First Year",
-                   choices = c(1900:2020),
-                   selected = 1991),
-       
-       sliderInput("nyears",
-                   "Number of Years",
-                   min = 5,
-                   max = 100,
-                   value = 20),
-       
-       sliderInput("nages",
-                   "Number of Ages",
-                   min = 4,
-                   max = 50,
-                   value = 10),
-       
-       checkboxInput("plusgroupflag",
-                     "Last Age a Plus Group?",
-                     value = TRUE),
-       
-       sliderInput("nindices",
-                   "Number of Indices",
-                   min = 1,
-                   max = 4,
-                   value = 2)
-     ),
-     mainPanel(
-       plotOutput("dimPlot")
-     )
-    )
-  ),
-  
-  tabPanel("M",
-    sidebarLayout(
-     sidebarPanel(
-       selectInput("Mopt",
-                 "Natural Mortality",
-                 choices = list("Single Value", "Constant over Time", "Matrix"),
-                 selected = "Single Value"),
-       
-       sliderInput("Mbase",
-                   "Base Natural Mortality Rate",
-                   min = 0.01,
-                   max = 0.90,
-                   step = 0.01,
-                   value = 0.2),
-       
-       checkboxInput("Merrorflag",
-                     "Add variability to M matrix?",
-                     value = FALSE),
-       
-       sliderInput("Msigma",
-                   "Sigma for added error to M matrix",
-                   min = 0,
-                   max = 1,
-                   step = 0.01,
-                   value = 0)
-     ),
-     mainPanel(
-       plotOutput("Mplot")
-     )
-    )
-  ),
-  
-  tabPanel("F",
-    sidebarLayout(
-      sidebarPanel(
-        sliderInput("Fyears",
-                    "Years for Setting F (in addition to first and last year)",
-                    min = 1,
-                    max = 10,
-                    step = 1,
-                    value = c(4,5)),
-        
-        sliderInput("Fages",
-                    "Ages for Setting F (in addition to first and last age)",
-                    min = 1,
-                    max = 10,
-                    step = 1,
-                    value = 3),
-        
-        fluidRow(
-          column(4,
-            sliderInput("Fy1a1", "Fy1a1",
-                        min = 0, max = 1, step = 0.1, value = 0.1),
-            sliderInput("Fy2a1", "Fy2a1",
-                        min = 0, max = 1, step = 0.1, value = 0.1),
-            sliderInput("Fy3a1", "Fy3a1",
-                        min = 0, max = 1, step = 0.1, value = 0.1),
-            sliderInput("Fy4a1", "Fy4a1",
-                        min = 0, max = 1, step = 0.1, value = 0.1)),
-          column(4,
-            sliderInput("Fy1a2", "Fy1a2",
-                        min = 0, max = 1, step = 0.1, value = 0.4),
-            sliderInput("Fy2a2", "Fy2a2",
-                        min = 0, max = 1, step = 0.1, value = 0.6),
-            sliderInput("Fy3a2", "Fy3a2",
-                        min = 0, max = 1, step = 0.1, value = 0.7),
-            sliderInput("Fy4a2", "Fy4a2",
-                        min = 0, max = 1, step = 0.1, value = 0.3)),
-          column(4,
-            sliderInput("Fy1a3", "Fy1a3",
-                        min = 0, max = 1, step = 0.1, value = 0.4),
-            sliderInput("Fy2a3", "Fy2a3",
-                        min = 0, max = 1, step = 0.1, value = 0.6),
-            sliderInput("Fy3a3", "Fy3a3",
-                        min = 0, max = 1, step = 0.1, value = 0.5),
-            sliderInput("Fy4a3", "Fy4a3",
-                        min = 0, max = 1, step = 0.1, value = 0.2))
-        )
-      ),
-      mainPanel(
-        tableOutput("Ftable")
-      )
-    )
-  ),
-  
-  tabPanel("WAA",
-    sidebarLayout(
-      sidebarPanel(
-        sliderInput("Winfyear1",
-                    "Winfinity in first year",
-                    min = 1,
-                    max = 100,
-                    step = 1,
-                    value = 10),
-        sliderInput("Kyear1",
-                    "K in first year",
-                    min = 0.1,
-                    max = 0.9,
-                    step = 0.05,
-                    value = 0.3)
-      ),
-      mainPanel(
-        plotOutput("Wplot")
-      )
-    )
-  ),
-  
-  navbarMenu("Indices",
-    tabPanel("Index 1",
-      sidebarLayout(
-        sidebarPanel(
-          sliderInput("i1A50",
-                      "Index 1 A50",
-                      min = 0,
-                      max = 50,
-                      step = 0.1,
-                      value = 4),
-          
-          sliderInput("i1slope",
-                      "Index 1 slope",
-                      min = -10,
-                      max = 10,
-                      step = 0.1,
-                      value = 1),
-          
-          sliderInput("i1A502",
-                      "Index 1 A50 2",
-                      min = 0,
-                      max = 50,
-                      step = 0.1,
-                      value = 10),
-          
-          sliderInput("i1slope2",
-                      "Index 1 slope 2",
-                      min = -10,
-                      max = 10,
-                      step = 0.1,
-                      value = 0),
-          
-          sliderInput("i1q",
-                      "Index 1 catchability",
-                      min = 0.01,
-                      max = 1,
-                      step = 0.01,
-                      value = 0.3)
-        ),
-        mainPanel(
-          plotOutput("indexplot")
-        )
-      )
-    )
-  ),
-  
-  tabPanel("Recruits",
-    sidebarLayout(
-      sidebarPanel(
-        sliderInput("R0",
-                    "Unexploited recruitment (millions)",
-                    min = 1,
-                    max = 100,
-                    step = 1,
-                    value = 14),
-      
-        sliderInput("steepness",
-                    "Steepness of Bev-Holt curve",
-                    min = 0.21,
-                    max = 1,
-                    step = 0.01,
-                    value = 0.7),
-        
-        sliderInput("Rsigma",
-                    "Sigma for error about SR curve",
-                    min = 0,
-                    max = 2,
-                    step = 0.1,
-                    value = 0),
-        
-        checkboxInput("Rsigmabiasflag",
-                      "Bias adjust recruitment values?",
-                      value = FALSE)
-      ),
-      mainPanel(
-        plotOutput("Recruitmentplot"),
-        plotOutput("Nyear1plot")
-      )
-    )
-  ),
-  
-  tabPanel("Download",
-    sidebarLayout(
-      sidebarPanel(
-        downloadButton("downloadinput", "Download Shiny input"),
-        downloadButton("downloadoutput", "Download Shiny output")
-      ),
-      mainPanel(
-      )
-    )
-  )
+                 
+                 tabPanel("Dimensions",
+                          sidebarLayout(
+                            sidebarPanel(
+                              selectInput("year1",
+                                          "First Year",
+                                          choices = c(1900:2020),
+                                          selected = 1991),
+                              
+                              sliderInput("nyears",
+                                          "Number of Years",
+                                          min = 5,
+                                          max = 100,
+                                          value = 20),
+                              
+                              sliderInput("nages",
+                                          "Number of Ages",
+                                          min = 4,
+                                          max = 50,
+                                          value = 10),
+                              
+                              checkboxInput("plusgroupflag",
+                                            "Last Age a Plus Group?",
+                                            value = TRUE),
+                              
+                              sliderInput("nindices",
+                                          "Number of Indices",
+                                          min = 1,
+                                          max = 4,
+                                          value = 2)
+                            ),
+                            mainPanel(
+                              plotOutput("dimPlot")
+                            )
+                          )
+                 ),
+                 
+                 tabPanel("M",
+                          sidebarLayout(
+                            sidebarPanel(
+                              selectInput("Mopt",
+                                          "Natural Mortality",
+                                          choices = list("Single Value", "Constant over Time", "Matrix"),
+                                          selected = "Single Value"),
+                              
+                              sliderInput("Mbase",
+                                          "Base Natural Mortality Rate",
+                                          min = 0.01,
+                                          max = 0.90,
+                                          step = 0.01,
+                                          value = 0.2),
+                              
+                              checkboxInput("Merrorflag",
+                                            "Add variability to M matrix?",
+                                            value = FALSE),
+                              
+                              sliderInput("Msigma",
+                                          "Sigma for added error to M matrix",
+                                          min = 0,
+                                          max = 1,
+                                          step = 0.01,
+                                          value = 0)
+                            ),
+                            mainPanel(
+                              plotOutput("Mplot")
+                            )
+                          )
+                 ),
+                 
+                 tabPanel("F",
+                          sidebarLayout(
+                            sidebarPanel(
+                              sliderInput("Fyears",
+                                          "Years for Setting F (in addition to first and last year)",
+                                          min = 1,
+                                          max = 10,
+                                          step = 1,
+                                          value = c(4,5),
+                                          sep="" ), #removes the comma from the year display on the slider
+                              
+                              sliderInput("Fages",
+                                          "Ages for Setting F (in addition to first and last age)",
+                                          min = 1,
+                                          max = 10,
+                                          step = 1,
+                                          value = 3),
+                              
+                              fluidRow(
+                                column(4,
+                                       sliderInput("Fy1a1", "Fy1a1",
+                                                   min = 0, max = 1, step = 0.1, value = 0.1),
+                                       sliderInput("Fy2a1", "Fy2a1",
+                                                   min = 0, max = 1, step = 0.1, value = 0.1),
+                                       sliderInput("Fy3a1", "Fy3a1",
+                                                   min = 0, max = 1, step = 0.1, value = 0.1),
+                                       sliderInput("Fy4a1", "Fy4a1",
+                                                   min = 0, max = 1, step = 0.1, value = 0.1)),
+                                column(4,
+                                       sliderInput("Fy1a2", "Fy1a2",
+                                                   min = 0, max = 1, step = 0.1, value = 0.4),
+                                       sliderInput("Fy2a2", "Fy2a2",
+                                                   min = 0, max = 1, step = 0.1, value = 0.6),
+                                       sliderInput("Fy3a2", "Fy3a2",
+                                                   min = 0, max = 1, step = 0.1, value = 0.7),
+                                       sliderInput("Fy4a2", "Fy4a2",
+                                                   min = 0, max = 1, step = 0.1, value = 0.3)),
+                                column(4,
+                                       sliderInput("Fy1a3", "Fy1a3",
+                                                   min = 0, max = 1, step = 0.1, value = 0.4),
+                                       sliderInput("Fy2a3", "Fy2a3",
+                                                   min = 0, max = 1, step = 0.1, value = 0.6),
+                                       sliderInput("Fy3a3", "Fy3a3",
+                                                   min = 0, max = 1, step = 0.1, value = 0.5),
+                                       sliderInput("Fy4a3", "Fy4a3",
+                                                   min = 0, max = 1, step = 0.1, value = 0.2))
+                              )
+                            ),
+                            mainPanel(
+                              tableOutput("Ftable")
+                            )
+                          )
+                 ),
+                 
+                 tabPanel("WAA",
+                          sidebarLayout(
+                            sidebarPanel(
+                              sliderInput("Winfyear1",
+                                          "Winfinity in first year",
+                                          min = 1,
+                                          max = 100,
+                                          step = 1,
+                                          value = 10),
+                              sliderInput("Kyear1",
+                                          "K in first year",
+                                          min = 0.1,
+                                          max = 0.9,
+                                          step = 0.05,
+                                          value = 0.3)
+                            ),
+                            mainPanel(
+                              plotOutput("Wplot")
+                            )
+                          )
+                 ),
+                 
+                 navbarMenu("Indices",
+                            tabPanel("Index 1",
+                                     sidebarLayout(
+                                       sidebarPanel(
+                                         sliderInput("i1A50",
+                                                     "Index 1 A50",
+                                                     min = 0,
+                                                     max = 50,
+                                                     step = 0.1,
+                                                     value = 4),
+                                         
+                                         sliderInput("i1slope",
+                                                     "Index 1 slope",
+                                                     min = -10,
+                                                     max = 10,
+                                                     step = 0.1,
+                                                     value = 1),
+                                         
+                                         sliderInput("i1A502",
+                                                     "Index 1 A50 2",
+                                                     min = 0,
+                                                     max = 50,
+                                                     step = 0.1,
+                                                     value = 10),
+                                         
+                                         sliderInput("i1slope2",
+                                                     "Index 1 slope 2",
+                                                     min = -10,
+                                                     max = 10,
+                                                     step = 0.1,
+                                                     value = 0),
+                                         
+                                         sliderInput("i1q",
+                                                     "Index 1 catchability",
+                                                     min = 0.01,
+                                                     max = 1,
+                                                     step = 0.01,
+                                                     value = 0.3)
+                                       ),
+                                       mainPanel(
+                                         plotOutput("indexplot")
+                                       )
+                                     )
+                            )
+                 ),
+                 
+                 tabPanel("Recruits",
+                          sidebarLayout(
+                            sidebarPanel(
+                              sliderInput("R0",
+                                          "Unexploited recruitment (millions)",
+                                          min = 1,
+                                          max = 100,
+                                          step = 1,
+                                          value = 14),
+                              
+                              sliderInput("steepness",
+                                          "Steepness of Bev-Holt curve",
+                                          min = 0.21,
+                                          max = 1,
+                                          step = 0.01,
+                                          value = 0.7),
+                              
+                              sliderInput("Rsigma",
+                                          "Sigma for error about SR curve",
+                                          min = 0,
+                                          max = 2,
+                                          step = 0.1,
+                                          value = 0),
+                              
+                              checkboxInput("Rsigmabiasflag",
+                                            "Bias adjust recruitment values?",
+                                            value = FALSE)
+                            ),
+                            mainPanel(
+                              plotOutput("Recruitmentplot"),
+                              plotOutput("Nyear1plot")
+                            )
+                          )
+                 ),
+                 
+                 tabPanel("Load/Save",
+                          sidebarLayout(
+                            mainPanel(
+                              #downloadButton("downloadinput", "Download Shiny input"),
+                              tags$h3("Load an existing configuration for modification")
+                              #value = "~/Desktop/user_inputs.csv"
+                              ,textInput(inputId = 'inputsLocation', label = 'Inputs Location'
+                                         , value = "/home/dhennen/WHSIM/TestData/user_inputs.Rdata")
+                              ,actionButton('load_inputs', 'Load inputs')
+                              ,br()
+                              ,br()
+                              ,tags$h3("Save your configuration for simulation" )
+                              ,br()
+                              ,br()
+                              #downloadButton("downloadoutput", "Download Shiny output")
+                              #/home/dhennen/WHSIM/TestData
+                              # value = "~/Desktop/user_changes.Rdata"
+                              ,textInput(inputId = 'outputsLocation', label = 'Location'
+                                         , value = "/home/dhennen/WHSIM/TestData/user_changes.Rdata")
+                              ,actionButton('save_inputs', 'Save modifications')
+                            ),
+                            mainPanel(
+                            )
+                          )
+                 )
 )
 
 # Define server logic required to draw a histogram
@@ -404,13 +420,13 @@ server <- function(input, output, session) {
   output$dimPlot <- renderPlot({
     ya <- expand.grid(Age = ages(), Year = years())
     plot(ya$Age, ya$Year, xlab="Age", ylab="Year")
-     title(paste("Number of Indices =", input$nindices))
-   })
-   
+    title(paste("Number of Indices =", input$nindices))
+  })
+  
   output$Mplot <- renderPlot({
     matplot(rownames(Mlist()$values), Mlist()$values, xlab="Year", ylab="M", ylim=c(0,max(Mlist()$values)))
   })
-   
+  
   output$Ftable <- renderTable({
     Flist()$Fgrid
   })
@@ -437,7 +453,7 @@ server <- function(input, output, session) {
       Nyear1noise[input$nages] <- Nyear1[input$nages] # do not apply noise to plus group
     }
     plot(ages(), Nyear1noise, xlab="Age", ylab="Population N in Year 1", ylim=c(0,max(c(Nyear1, Nyear1noise))))
-     lines(ages(), Nyear1)
+    lines(ages(), Nyear1)
   })
   
   output$Recruitmentplot <- renderPlot({
@@ -445,27 +461,50 @@ server <- function(input, output, session) {
     r <- Rlist()$BHalpha * ssb / (Rlist()$BHbeta + ssb)
     rn <- addLognormalError(r, input$Rsigma, input$Rsigmabiasflag)
     plot(ssb, rn, xlab="SSB", ylab="Recruits (millions)")
-     lines(ssb, r)
-     title(main = "Demonstration of recruitment variability")
+    lines(ssb, r)
+    title(main = "Demonstration of recruitment variability")
   })
- 
-  #chris's original code 
-  # output$downloadinput <- downloadHandler(
-  #   filename = function() {paste0("ShinyInput", Sys.time(), ".DMP")},
-  #   content = function(file) {save(input, file=file)}
-  # )
   
-  output$downloadinput <- downloadHandler(
-    filename = function() {paste0("ShinyInput", Sys.time(), ".Rlist")},
-    content = function(file) {dput(input, file=file)}
-  )
+  load_Rdata <- function(){
+    if(is.null(input$file)) return(NULL)
+    #need to read the input file without changing it so use isolate()
+    inFile <- isolate({ input$file })
+    
+    #load Rdata setting the envir is important here
+    load(inFile$datapath, envir=environment())
+    
+    # Check if specified variable exists in environment
+    if( !is.null(n.env$var) ){
+      output$out <- renderPrint({ str(n.env$var) })
+    }
+    else{
+      output$out <- renderPrint({ "No variable var in .Rdata file" })
+    }
+  }
   
-  output$downloadoutput <- downloadHandler(
-    filename = function() {paste0("ShinyOutput", Sys.time(), ".DMP")},
-    content = function(file) {save(output, file=file)}
-  )
+  observeEvent(input$load_inputs, {
+    load_Rdata()
+    #print(str(inputs)) #values are seen here
+    updateSelectInput(session, inputId = "year1", selected = inputs$year1)
+    updateSliderInput(session, inputId = "nyears", value = inputs$nyears)
+    updateSliderInput(session, inputId = "nages", value = inputs$nages)
+    updateSliderInput(session, inputId = "nindices", value = inputs$nindices)
+    updateCheckboxInput(session, inputId = "plusgroupflag", value = inputs$plusgroupflag)
+  })
+  
+  observeEvent(input$save_inputs, {
+    #save_Rdata()
+    # choose inputs to save
+    inputs <- list(
+      "year1"=input$year1
+      ,"nyears"=input$nyears
+      ,"nages"=input$nages
+      ,"plusgroupflag"=input$plusgroupflag
+      ,"nindices"=input$nindices
+      )
+    save(inputs,file = paste0(input$inputsLocation))
+  }) 
 }
 
 # Run the application 
 shinyApp(ui = ui, server = server)
-
