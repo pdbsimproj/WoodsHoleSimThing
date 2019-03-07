@@ -1,3 +1,8 @@
+# WORK IN PROGRESS (jot down a note when you are working on something to help avoid redundancy)
+* (Chris)..
+* (Liz)..nothing at the moment...
+* (Dan)..
+
 # Shiny Tips
 
 ### Video Tutorials
