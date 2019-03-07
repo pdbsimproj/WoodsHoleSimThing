@@ -12,6 +12,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This is a document where we can post our ideas as they occur. Add newest bits to the top.
 
+## how to use packages within subdirectories of a project
+[instructions](https://cran.r-project.org/web/packages/rprojroot/vignettes/rprojroot.html)
+
 ## usethis instead of devtools
 [part1](https://blog.methodsconsultants.com/posts/developing-r-packages-using-gitlab-ci-part-i/) nice overview of creating R package with usethis
 [part2](https://blog.methodsconsultants.com/posts/developing-r-packages-using-gitlab-ci-part-i/) not much of interest for us, for completeness only
