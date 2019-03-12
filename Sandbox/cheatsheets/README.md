@@ -1,6 +1,6 @@
 # WORK IN PROGRESS (jot down a note when you are working on something to help avoid redundancy)
 * (Chris)..
-* (Liz)..tinkering with layout and file upload/variable assignment...
+* (Liz)..tinkering with layout and file upload/variable assignment...small progress uploaded
 * (Dan)..
 
 # Shiny Tips
