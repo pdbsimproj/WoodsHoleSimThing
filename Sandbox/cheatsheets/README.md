@@ -1,5 +1,5 @@
 # WORK IN PROGRESS (jot down a note when you are working on something to help avoid redundancy)
-* (Chris)..trying to define some workflows in MindMap
+* (Chris)..
 * (Liz)..tinkering with layout and file upload/variable assignment...
 * (Dan)..
 
