@@ -12,7 +12,16 @@ ui <- navbarPage(strong("WKFORBIAS Set Up"),
                               HTML(paste("Welcome to the ", tags$span(style="color:blue", "Woods Hole SimThing"), " Shiny App", sep = ""))
                             ),
                             hr(),
-                            h4("blah blah")
+                            h4("blah blah"),
+                            br(),
+                            p(stringi::stri_rand_lipsum(1)),
+                            br(),
+                            p(stringi::stri_rand_lipsum(1, start_lipsum = FALSE)),
+                            br(),
+                            h4("yada yada"),
+                            p(stringi::stri_rand_lipsum(1, start_lipsum = FALSE)),
+                            br(),
+                            p(stringi::stri_rand_lipsum(1, start_lipsum = FALSE))
                           )
                  ),   
                  
