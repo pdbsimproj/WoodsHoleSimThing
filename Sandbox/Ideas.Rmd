@@ -215,5 +215,8 @@ Travis CI seems to be more for testing the version compatibility of dependent li
 * WHAT - Woods Hole Assessment Toy
 * WhaTF - Woods Hole Assessment Toy for Fisheries
 * WHALL - Woods Hole Age Length Lagniappe
+* WoHoSim - Woods Hole Simulator (pronounced either woo hoo sim or woe hoe sim depnding on hipster you feel)
+* WHOOPS - Woods Hole Object Oriented Programming Simulator
+* WHIMP - Woods Hole Interactive Modelling Project
 
 
