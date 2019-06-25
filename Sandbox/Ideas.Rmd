@@ -12,6 +12,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This is a document where we can post our ideas as they occur. Add newest bits to the top.
 
+## Blog on reading/writing files in Shiny
+[readwriteShiny](https://www.r-bloggers.com/shiny-application-with-modules-saving-and-restoring-from-rds/)
+
 ## Toolbox future
 Looks like .json will be the format for input/output of Toolbox models in the future. Not suggesting we do this now, just something to think about for the future.
 
